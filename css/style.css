@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    src: url("../fontovi/Gilroy-ExtraBold.otf");
+    font-family: "gb";
+}
+@font-face{
+    src: url("../fontovi/Gilroy-Light.otf");
+    font-family: "gl";
+}
+header{
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+}
+.header{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+}
+header img{
+    height: 30px;
+    width: auto;
+    align-self: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-self: center;
+    margin: 0;
+    align-self: center;
+}
+.navigacija{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ul li {
+    margin-left: 15px;
+    font-family: "gb";
+    color: white;
+    font-size: 20px;
+}
+.omotac{
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;}
+#holder{
+    position: relative;
+    top: -100px;
+}
+h1{
+    font-size: 70px;
+    font-family: "gb";
+    color: white;
+    text-align: center;
+}
+.fade{
+    animation: fade 0.5s forwards;
+}
+@keyframes fade {
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+.current{
+    background-color: white;
+}
+.thumb{
+    height: 100px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cicrle{
+    border-radius: 50%;
+    border: 1px solid white;
+   width:10px;
+   height:10px;
+   margin-left: 10px;
+   align-self: flex-end;
+   position: relative;
+   top: 300%;       
+ }
+    .image{
+        height:900px;
+        width: 100%;
+        background-image: url("../slike/slika1.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size:cover;
+        background-attachment: fixed;
+    }
+    .arrows{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .next{
+        transform: rotate(180deg);
+    }
+    .arrows img{
+        background-color: transparent;
+    }
+    .arrows img{
+        opacity: 0;
+    }
+    .ham{
+        height: auto;
+        width: 50px;
+        display: none;
+    }
+    .lines{
+        height: 5px;
+        width: 40px;
+        background-color: white;
+        margin-top: 5px;
+        position: relative;
+    }
+    .lines:nth-child(2){
+        width: 50%;
+    }
+    @media screen and (max-width:768px){
+        .ham{
+            display: block;
+            align-self: center;
+        }
+        .navigacija ul{
+            display: none;
+        }
+        h1{
+            font-size: 40px;
+        }
+    }
+    .menu{
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        top: 0%;
+        backdrop-filter:blur(10px);
+    }
+    .body{
+        height: 100%;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    }
+    .hamUl{
+        display: flex;
+        flex-direction: column;
+    }
+    .hamUl li {
+        margin-top: 40%;
+        font-size: 30px;
+    }
+    .in{
+        animation: in 1s forwards;
+    }
+    @keyframes in {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+        }
+    }
+    .out{
+        animation:out 1s forwards
+    }
+    @keyframes out {
+        0%{
+           display: none;
+           opacity: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        100%{
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+        }
+    }
+    .dis{
+        animation: dis 0.5s forwards;
+    }
+    @keyframes dis {
+        0%{left: 0;}
+        100%{left: 300%}
+    }
+    .app{
+        animation: app 0.5s forwards;
+    }
+    @keyframes app{
+         0%{left: 300%;}
+        100%{left: 0%}
+    }
+    .rotateOne{
+        animation: rotateOne 1s forwards;
+    }
+    @keyframes rotateOne {
+        0%{
+            transform: rotate(0deg);
+            width: 50%;
+            top: 0%;
+        }
+        100%{
+            transform: rotate(405deg);
+            width: 80%;
+            top: 5%;
+        }
+    }
+    .rotateOneR{
+        animation: rotateOneR 1s forwards
+    }
+    @keyframes rotateOneR { 
+        0%{
+            transform: rotate(405deg);
+            width: 80%;
+            top: 5%;
+        }
+        100%{
+            transform: rotate(0deg);
+            width: 50%;
+            top: 0%;
+        }
+     }
+
+
+     .rotateTwo{
+        animation: rotateTwo 1s forwards;
+    }
+    @keyframes rotateTwo {
+        0%{
+            transform: rotate(0deg);
+            top: 0%
+        }
+        100%{
+            transform: rotate(-405deg);
+           top: -30%;
+        }
+    }
+    .rotateTwoR{
+        animation: rotateTwoR 1s forwards
+    }
+    @keyframes rotateTwoR { 
+        0%{
+            transform: rotate(-405deg);
+            top: -30%;
+           
+        }
+        100%{
+            transform: rotate(0deg);
+            top: 0%;
+        }
+     }
+     .oNama{
+         height: auto;
+     }
+     .oNama h2{
+         font-family: "gb";
+         text-align: center;
+         color: black;
+         padding-bottom: 70px;
+     }
+     .oNama h3{
+         text-align: center;
+        font-family: "gb";
+        padding-bottom: 40px;
+        }
+     .oNama p {
+         text-align: center;
+         font-family: "gl";
+         text-align: center;
+         font-size: 20px;
+         padding-bottom: 70px;
+     }
+     .oNama ul{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         padding-bottom: 40px;
+         text-align: center;
+     }
+     .oNama ul li {
+        color: black;
+        font-family: "gl";
+        padding-bottom: 10px;
+    }
+     .wrap{
+         width: 80%;
+         margin: 0 auto;
+     }
+     .cards .row{
+         margin: 0;
+     }
+     .cards{
+         height: auto;
+         width: 100%;
+         background: url("../slike/pozadina.jpg");
+         background-position: center center;
+         background-size: cover;
+         background-attachment: fixed;
+         display: flex;
+         flex-direction: column;
+     }
+     .cards a{
+         margin: 0 auto;
+     }
+     .cards button{
+         background-color: transparent;
+         border: 0;
+         text-align: center;
+         font-family: "gl";
+         padding: 5px 20px;
+         border: 1px solid white;
+         border-radius: 10px;
+         color: white;
+         margin-bottom: 40px;
+         margin-left: auto;
+         margin-right: auto;
+     }
+     .cards img{
+         max-height: 70px;
+         width: auto;
+         display: block;
+         margin: 0 auto;
+         margin-bottom: 50px;
+         margin-top: 50px;
+     }
+     .cards h3{
+         text-align: center;
+         color: white;
+         display: block;
+         width: 60%;
+         margin:0 auto;
+         font-family: "gl";
+         margin-bottom: 40px;
+     }
+     .col-md-4{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+     .naocare{
+        height: auto;
+        width: 100%;
+     }
+     .col-md-6 h2{
+        text-align: center;
+        color: black;
+        padding: 40px 0 40px 0;
+        margin: 0;
+        font-family: "gb";
+     }
+     .col-md-6 p {
+        text-align: center;
+        font-family: "gl";
+        padding: 0 20px  40px 20px;
+        margin: 0;
+     }
+     .col-md-6:first-child{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+     .kontakt{
+         font-family: "gl";
+         padding:40px 0 40px 0;
+     }
+     .kontakt h2{
+         font-family: "gb";
+         text-align: center;
+         padding-bottom: 30px;
+     }
+     #submit{
+         background-color: transparent !important;
+         border: 1px solid grey;
+     }
+    .form-group ul li {
+         color: #dc3545 !important;
+     }
+     .mape{
+         height: 300px;
+         width: 100%;
+         margin: 40px 0 40px 0;
+     }
+     footer{
+         height: auto;
+         width: 100%;
+         background-color: rgba(0, 0, 0,0.7);
+         padding-bottom: 20px;
+         padding-top: 20px;
+     }
+ footer h3{
+     color: white;
+     font-weight: "gl";
+     padding-left: 20px;
+     align-self: center;
+     margin: 0;
+ }
+ footer .social img {
+     height: 30px;
+     width: auto;
+     padding-right: 20px;
+     align-self: center;
+ }
+ footer .social {
+     align-self: center;
+     display: flex;
+ }
+ @media(max-width:600px){
+     footer h3{
+         font-size: 20px;
+         padding-bottom: 20px;
+         padding-left: 0;
+     }
+     footer .social img{
+         height: 20px;
+         width: auto;
+         padding-right: 10px;
+     }
+     footer .omotac {
+         flex-direction: column;
+         justify-content: center;
+     }
+ }
+ a:hover{
+     text-decoration: none;
+ }
+ html{
+     scroll-behavior: smooth;
+ }
+ /*
+STRANICA STAKLA
+ */
+ #opisStakla{
+     width: 100%;
+     height: 800px;
+     text-align: center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     color: white;
+     margin-bottom: 30px;
+ }
+ #opisStakla:nth-child(even){
+    margin-left: 20px;
+ }
+ #opisStakla p {
+     width: 80%;
+     margin: 0 auto;
+     padding: 40px 0;
+     font-family: "gl";
+     text-align: justify;
+ }
+ #opisStakla h2{
+     font-family: "gb";
+     color: white;
+ }
+.blueCut{
+    background-image: url("../slike/BlueCut.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.antiprogresive{
+    background-image: url("../slike/PhotoGrey.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.antirefleks{
+    background-image: url("../slike/antirefleks.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.grey{
+    background-image: url("../slike/greyTransition.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+@media screen and (max-width:765px){
+    #opisStakla{
+        margin-left: 0;
+       height: auto;
+
+    }
+}
+.opisiDrzac h2{
+    text-align: center;
+    font-family: "gb";
+    padding-bottom: 80px;
+}
